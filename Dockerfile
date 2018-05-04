@@ -2,7 +2,7 @@ FROM resin/rpi-raspbian:stretch
 MAINTAINER yamaryoxxxx@gmail.com
 
 # initialization
-RUN /bin/sh -c apt-get update
+RUN /bin/sh -c "apt-get update"
 
 # install nodejs
 # https://github.com/audstanley/NodeJs-Raspberry-Pi
