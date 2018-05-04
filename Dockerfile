@@ -14,6 +14,7 @@ RUN npm install -g nodemon
 
 # install cloud9
 RUN apt-get install -y git make gcc python2.7
+RUN apt-get install -y libc6-dev
 RUN git clone https://github.com/c9/core.git /cloud9 && \
     cd /cloud9 && \
     ./scripts/install-sdk.sh
