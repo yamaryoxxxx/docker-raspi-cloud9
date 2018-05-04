@@ -19,6 +19,9 @@ RUN git clone https://github.com/c9/core.git /cloud9 && \
     cd /cloud9 && \
     ./scripts/install-sdk.sh
 
+# install nodemon
+RUN npm install -g nodemon
+
 # entry point
 WORKDIR /cloud9
 EXPOSE 8181
