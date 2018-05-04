@@ -1,8 +1,9 @@
 FROM resin/rpi-raspbian:stretch
 MAINTAINER yamaryoxxxx@gmail.com
 
-# system update
+# apt-get
 RUN apt-get update
+RUN apt-get install wget
 
 # install nodejs
 # https://github.com/audstanley/NodeJs-Raspberry-Pi
