@@ -19,11 +19,8 @@ RUN git clone https://github.com/c9/core.git /cloud9 && \
     cd /cloud9 && \
     ./scripts/install-sdk.sh
 
-# install nodemon
-RUN npm install -g nodemon
-
 # entry point
 WORKDIR /cloud9
 EXPOSE 8181
 VOLUME /workspace
-CMD nodemon ./server.sh -p 8181 -l 0.0.0.0 -w /workspace
+CMD while true; do node ./server.sh -p 8181 -l 0.0.0.0 -w /workspace; sleep 5; done
