@@ -13,7 +13,8 @@ RUN wget -O - https://raw.githubusercontent.com/audstanley/NodeJs-Raspberry-Pi/m
 RUN npm install -g nodemon
 
 # install cloud9
-RUN apt-get install -y git python2.7 make gcc g++ build-essential libc6-dev
+RUN apt-get install -y git python-setuptools python-dev
+RUN apt-get install -y make gcc g++ build-essential libc6-dev
 RUN git clone https://github.com/c9/core.git /cloud9 && \
     cd /cloud9 && \
     ./scripts/install-sdk.sh
