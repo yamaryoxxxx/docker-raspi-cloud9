@@ -9,9 +9,6 @@ RUN apt-get update
 RUN apt-get install -y wget
 RUN wget -O - https://raw.githubusercontent.com/audstanley/NodeJs-Raspberry-Pi/master/Install-Node.sh | sudo bash
 
-# install nodemon
-RUN npm install -g nodemon
-
 # install cloud9
 RUN apt-get install -y git python-setuptools python-dev
 RUN apt-get install -y make gcc g++ build-essential libc6-dev
