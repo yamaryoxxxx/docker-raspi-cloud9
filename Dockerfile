@@ -3,7 +3,7 @@ MAINTAINER yamaryoxxxx@gmail.com
 
 # apt-get
 RUN apt-get update
-RUN apt-get install wget
+RUN apt-get install -y wget
 
 # install nodejs
 # https://github.com/audstanley/NodeJs-Raspberry-Pi
