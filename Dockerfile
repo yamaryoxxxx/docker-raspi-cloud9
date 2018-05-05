@@ -2,12 +2,12 @@ FROM resin/rpi-raspbian:stretch
 MAINTAINER yamaryoxxxx@gmail.com
 
 # initialization
-RUN apt-get update
+RUN apt-get update && apt-get full-upgrade -y
 
 # install nodejs
-# https://github.com/audstanley/NodeJs-Raspberry-Pi
-RUN apt-get install -y wget
-RUN wget -O - https://raw.githubusercontent.com/audstanley/NodeJs-Raspberry-Pi/master/Install-Node.sh | sudo bash
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash
+RUN apt-get install -y nodejs
+ENV PATH=$PATH:/opt/nodejs/bin
 
 # install cloud9
 RUN apt-get install -y git python-setuptools python-dev
